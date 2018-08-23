@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta  charset="utf-8">
+<link rel="stylesheet" type="text/css" href="complete.css">
+<script src="complete1.js"></script>
+
+</head>     
+
+<body onclick="renderInvisible()">
+    <section >
+        <div class = "logo"><img src="google.jpg"></div>
+        <div id="input-box">
+            <input type="text" placeholder="input name" id="enter-val"  onkeyup="AutocompleteFunct(this.value,event)">
+            <button onclick="renderDataListInvisible()" class="btn" >X</button>
+            <ul id="list" type="none"></ul>
+        </div>
+    </section>
+</body>
+</html>
