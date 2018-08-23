@@ -1,20 +1,22 @@
 
-function onClickEventInvisible()
+function renderInvisible()
 {
-  document.getElementById("list").style.display="none";
+  document.getElementById("list").value="";
+ 
 }
 function AutocompleteFunct(name)
 {     
   var myArray = ["Ragul", "Rajpreet", "Pallvi", "Neha", "Ankita", "Raja", "Shreea", "Smriti", "Shrijeet", "Ayush", "Swapnil", "Nihit", "Bhargavi", "Anushka", "Swinal", "Utkarsh", "Saurabh", "Paarth", "Vishwas", "Mohit", "Gurbaksh", "Ashwarya"];
   myArray.sort();
   if(name.length !== 0)
-  {
-    var boxInput = document.getElementById("list");
-    boxInput.innerHTML ='';
+  { 
+    var flag=0;
+     document.getElementById("list").innerHTML ='';
     var listOfAutocomplete = document.getElementById("list");
     for (var index = 0; index < myArray.length; index++)
     {
       var nameAtIndex = myArray[index].toLowerCase();
+     //    var nameAtIndex= this.element.val().replace(/ /g, '').replace(/.(?=.)/g, '$& *');
       var local=name.toLowerCase();
       if(nameAtIndex.indexOf(local) !== -1)
       {
@@ -25,21 +27,20 @@ function AutocompleteFunct(name)
         flag=1;
       }
     }
-    if(flag!==1)
+    if(flag!=1)
     {
-      var li = document.createElement("li");
-      li.innerHTML = "Nothing Found";
-      listOfAutocomplete.appendChild(li);
+      var newElement=document.createElement("li");
+      newElement.setAttribute("onclick", "renderVisible(none)");
+      listOfAutocomplete.appendChild(newElement);
+      newElement.innerHTML="NotFound";
     }
   }
   else
   {
-    boxInput = document.getElementById("list");
-    boxInput.innerHTML ='';
+    document.getElementById("list").innerHTML ='';
   }
   console.log();
 }
-
 function renderVisible(name) 
 {
    document.getElementById("enter-val").value = name;

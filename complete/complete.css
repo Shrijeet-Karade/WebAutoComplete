@@ -15,7 +15,6 @@ input {
  
   margin-top:5em;
   margin-left: 46%;
-
 }
 .autocomplete-it{
 	margin-left: 25%;
@@ -38,15 +37,15 @@ section {
 }
 #list {
     width: 100%;
-    margin-top: 1px;
-    
+    margin-top: 1px;  
     max-height: 200px;
     border-bottom: 2px solid;
-    border-left: 1px solid;
-    border-right: 1px solid;
+    border-left: 2px solid;
+    border-right: 2px solid;
     border-color: cornflowerblue;
     overflow: auto;
     padding-left: 5px;
+    padding-right: 5px;
 }
 li {
     height: 40px;
