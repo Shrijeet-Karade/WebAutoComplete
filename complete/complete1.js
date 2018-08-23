@@ -1,8 +1,8 @@
 
 function renderInvisible()
 {
-  document.getElementById("list").value="";
- 
+  
+  document.getElementById("list").innerHTML=""; 
 }
 function AutocompleteFunct(name)
 {     
@@ -30,7 +30,7 @@ function AutocompleteFunct(name)
     if(flag!=1)
     {
       var newElement=document.createElement("li");
-      newElement.setAttribute("onclick", "renderVisible(none)");
+      newElement.setAttribute("onclick", "renderVisible('"+myArray[index]+"')");
       listOfAutocomplete.appendChild(newElement);
       newElement.innerHTML="NotFound";
     }
@@ -39,10 +39,17 @@ function AutocompleteFunct(name)
   {
     document.getElementById("list").innerHTML ='';
   }
-  console.log();
+  console.log("exiting AutocompleteFunct");
 }
 function renderVisible(name) 
 {
    document.getElementById("enter-val").value = name;
    document.getElementById("list").innerHTML="";
+   console.log("exiting renderVisible");
+}
+function renderDataListInvisible()
+{
+  document.getElementById("enter-val").value="";
+  document.getElementById("list").innerHTML="";
+  console.log("exiting renderDataListInVisible");
 }
