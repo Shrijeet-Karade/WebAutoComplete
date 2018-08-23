@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="complete.css">
+<script src="complete1.js"></script>
+
+</head>     
+
+<body onclick="onClickEventInvisible()">
+    <section>
+        <div class = "logo"><img src="google.jpg"></div>
+        <div id="input-box" onclick="renderVisible(name)">
+            <input type="text" placeholder="input name" id="enter-val" onkeyup="AutocompleteFunct(this.value)">
+            <ul id="list" type="none">
+            </ul>
+        </div>
+    </section>
+</body>
+</html>
