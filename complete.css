@@ -37,11 +37,13 @@ li:hover {
 #enter-val{
     height: 40px;
     width: 96%;
+    border-style: unset;
+    padding-left: 4px;
 }
 #list {
-    width: 95%;
+    width: 97.9%;
     margin-top: 1px;  
-    max-height: 200px;
+    max-height: 230px;
     border-bottom: 2px solid;
     border-left: 2px solid;
     border-right: 2px solid;
@@ -54,11 +56,17 @@ li:hover {
 .btn {
 align-content: center;
 width:25px;
-height:45px;
-
+height:43px;
+border-style:unset;
+background-color: cornflowerblue;
+color:#FFFFFF; 
+}
+.btn:hover{
+background-color: red;
+color:#FFFFFF;  
 }
 .logo{
- 
+  text-align: center;
   margin-top:5em;
-  margin-left: 46%;
+ 
 }
